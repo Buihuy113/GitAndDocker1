@@ -20,6 +20,13 @@ public class User {
 
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
-    public void updateEmail(String newEmail) { this.email = newEmail; }
+    public void updateEmail(String newEmail) {
+        if (newEmail != null && newEmail.contains("@")) {
+            System.out.println("Email cập nhật từ: " + this.email + " -> " + newEmail);
+            this.email = newEmail;
+        } else {
+            System.out.println("Email không hợp lệ: " + newEmail);
+        }
+    } 
 
 }
