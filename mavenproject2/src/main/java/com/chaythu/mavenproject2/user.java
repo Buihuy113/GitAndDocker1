@@ -1,0 +1,31 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.chaythu.mavenproject2;
+
+/**
+ *
+ * @author duchuy
+ */
+public class user {
+    private String userId;
+    private String email;
+
+    public user(String userId, String email) {
+        this.userId = userId;
+        this.email = email;
+    }
+
+
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
+     public void updateEmail(String newEmail) {
+        if (newEmail != null && newEmail.contains("@")) {
+            System.out.println("Email cập nhật từ: " + this.email + " -> " + newEmail);
+            this.email = newEmail;
+        } else {
+            System.out.println("Email không hợp lệ: " + newEmail);
+        } }
+
+}
